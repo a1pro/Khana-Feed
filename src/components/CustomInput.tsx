@@ -44,7 +44,9 @@ const CustomInput: FC<CustomInputProps> = ({
   maxDate = new Date(),
 }) => {
   const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false); // State to toggle password visibility
-
+  const togglePasswordVisibility = () => {
+    setIsPasswordVisible(!isPasswordVisible);
+  };
   return (
     <View
       style={[
@@ -88,7 +90,7 @@ const CustomInput: FC<CustomInputProps> = ({
         {type === 'password' && (
           <TouchableOpacity
             style={styles.iconContainer} // Style for the icon container
-            // onPress={togglePasswordVisibility} // Toggle visibility on icon press
+            onPress={togglePasswordVisibility} // Toggle visibility on icon press
           >
             <VectorIcon type="Feather" name="eye" size={20} />
           </TouchableOpacity>

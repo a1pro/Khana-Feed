@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
 import COLORS from '../../utils/Colors';
-import {verticalScale} from '../../utils/Metrics';
+import {responsiveFontSize, verticalScale} from '../../utils/Metrics';
 
 const styles = StyleSheet.create({
   container: {
@@ -30,15 +30,14 @@ const styles = StyleSheet.create({
     resizeMode:'contain',
     alignSelf:"center",
     marginBottom:verticalScale(30)
-    // backgroundColor:"black"
-    // right:10
+    
   },
   header: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     backgroundColor:COLORS.appColor,
-    height:"15%",
+    height:"10%",
     borderBottomRightRadius:30,
     borderBottomLeftRadius:30
   },
@@ -52,6 +51,10 @@ view1: {
   backgroundColor: COLORS.backgroundColor,
   borderRadius: 12,
   marginVertical: 10,
+},
+txt:{ textAlign: 'center',
+fontSize: responsiveFontSize(22),
+marginBottom: verticalScale(10)
 }
 });
 

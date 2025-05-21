@@ -52,7 +52,7 @@ const CustomButton: FC<CustomButtonProps> = ({
       {isLoading ? (
         <ActivityIndicator
           style={{ height: verticalScale(20) }}
-          color={COLORS.blue}
+          color={COLORS.backgroundColor}
         />
       ) : ( 
         <CustomText type={textSize} color={textColor} fontFamily="bold">

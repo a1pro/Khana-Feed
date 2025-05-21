@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import { verticalScale } from '../../utils/Metrics';
+import { responsiveFontSize, verticalScale } from '../../utils/Metrics';
 
 
 const styles = StyleSheet.create({
@@ -8,15 +8,20 @@ const styles = StyleSheet.create({
     height:100,
     width:100,
     resizeMode:'contain',
-    paddingVertical:"40%",
+    paddingVertical:"30%",
     alignSelf:"center"
     
   },
   inputContainer: {
-    gap: verticalScale(30),
-    marginVertical: verticalScale(30),
+    gap: verticalScale(10),
+    marginVertical: verticalScale(20),
     padding:20
   },
+  error:{
+    fontSize:responsiveFontSize(16),
+    color:"red",
+    marginHorizontal:verticalScale(10)
+  }
  
 });
 
